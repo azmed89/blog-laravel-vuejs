@@ -37,7 +37,9 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::with(['publisher', 'categories'])->findOrFail($id);
+
+        return $post;
     }
 
     /**

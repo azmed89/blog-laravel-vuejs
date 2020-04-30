@@ -35,7 +35,7 @@
                                 <p class="card-text">
                                     {{ post.text.substring(0, 150) }}...
                                 </p>
-                                <a href="#" class="btn btn-primary">Lire plus &rarr;</a>
+                                <a @click="$router.push('/posts/' + post.id)" class="btn btn-primary">Lire plus &rarr;</a>
                             </div>
                             <div class="card-footer text-muted">
                                 Publié le {{ post.created_at | formatDate}} par

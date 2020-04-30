@@ -37,7 +37,9 @@ class CareerController extends Controller
      */
     public function show($id)
     {
-        //
+        $offer = Offer::findOrFail($id);
+
+        return $offer;
     }
 
     /**
